@@ -16,16 +16,25 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'coz-new');
+
+if ( file_exists( dirname( __FILE__ ) . '/wp-config-local.php' ) ) {
+    include( dirname( __FILE__ ) . '/wp-config-local.php' );
+
+} else {
+
+define('DB_NAME', 'db174749_coznew');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'db174749_admin');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', 'SilverH3lm');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'internal-db.s174749.gridserver.com');
+
+define('WP_HOME','http://testing.ingagecreativegroup.com/cg');
+define('WP_SITEURL','http://testing.ingagecreativegroup.com/cg');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -33,6 +42,7 @@ define('DB_CHARSET', 'utf8');
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 
+}
 /**#@+
  * Authentication Unique Keys and Salts.
  *
