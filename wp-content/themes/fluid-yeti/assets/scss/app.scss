@@ -1,0 +1,337 @@
+/*===========================================================*/
+/*						     Fluid Theme Custom Sass                   */
+/*===========================================================*/
+
+@import "_settings";              // Foundation Settings
+@import "_foundation";            // Foundation Core
+@import "_global";                // Base style & variables
+@import "components/_buttons";    // Button tweaks
+@import "components/_forms";      // Form tweaks
+@import "components/_media";      // WP media
+@import "components/_wp-classes"; // WP generated classes
+@import "layouts/_general";       // General styling
+@import "layouts/_header";        // Header styling
+@import "layouts/_sidebar";       // Sidebar styling
+@import "layouts/_footer";        // Footer styling
+@import "layouts/_pages";         // Page styling
+@import "layouts/pages/_home";    // Home page styling
+@import "layouts/_posts";         // Post styling
+
+/*===========================================================*/
+/*========================  Mixins  =========================*/
+/*===========================================================*/
+
+@mixin bp($point) {
+  @if $point == xl {
+    @media (max-width: 1024px) { @content; }
+  }
+  @else if $point == lg {
+    @media (max-width: 768px)  { @content; }
+  }
+  @else if $point == md {
+    @media (max-width: 640px)  { @content; }
+  }
+  @else if $point == sm {
+    @media (max-width: 480px)  { @content; }
+  }
+  @else if $point == xs {
+    @media (max-width: 320px)  { @content; }
+  }
+  @else {
+    @media (max-width: #{$point}px)  { @content; }
+  }
+}
+.button-white {
+  @include button-base();
+  background: $white !important;
+  color: $secondary-color !important;
+  padding: 10px 20px;
+  transition: background 0.5s ease;
+  &:hover {
+    background: $primary-color !important;
+    color: #fff !important;
+    transition: all 0.5s ease;
+  }
+}
+/*===========================================================*/
+/*======================  Navigation  =======================*/
+/*===========================================================*/
+
+.top-bar-section {
+  float: none;
+  ul {
+    li {
+      > a {
+        text-transform: uppercase;
+      }
+    } 
+  } 
+} 
+.top-bar .name h1 a {
+  padding-left: 0;
+  padding-right: 0;
+}
+/*===========================================================*/
+/*=======================  Home Page  =======================*/
+/*===========================================================*/
+body {
+  background: #eee;
+  color: #444;
+}
+.content {
+  margin-top: 120px;
+}
+header {
+  box-shadow: 0 4px 2px -2px #999;
+}
+section {
+  float: left;
+  width: 100%;
+  .row {
+    background: #fff;
+    padding: 30px;
+  }
+}
+.hero {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  height: 550px;
+  .row {
+    background: transparent;
+    padding: 0;
+  }
+  .hero-vid-bg {
+    background: rgba(206,206,206,0.7);
+    margin-top: 55px;
+    @media screen and (max-width:640px) {
+      padding-top: 30px;
+    }
+    .flex-video {
+      margin-bottom: 0;
+    }
+    .hero-vid-content {
+      padding-top: 75px;
+      @media screen and (max-width:640px) {
+        padding-top: 20px;
+      }
+      h2 {
+        color: $oil;
+        font-size: 40px;
+        padding: 0 0 15px 15px;
+      }
+      p {
+        font-size: 20px;
+        line-height: 26px;
+        color: $oil;
+        padding: 0 0 15px 15px;
+      }
+    }
+  }
+  @media screen and (max-width:640px) {
+    height: auto;
+  }
+}
+.hero-secondary {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: 0 -350px !important;
+  position: relative;
+  height: 350px;
+  .quote-box {
+    background: rgba(206, 206, 206, 0.7);
+    width: 100%;
+    padding: 20px 0 0;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    min-height: 50px;
+    .row {
+      background:url(../img/quote.png) no-repeat top left;
+      p {
+        font-family: $font-family-serif;
+        font-style: italic;
+        text-align: left;
+        font-size: 16px;
+        padding: 0 0 0 50px;
+        span {
+          display: block;
+          float: left;
+          width: 100%;
+          text-align: right;
+          font-weight: bold;
+          font-style: normal;
+        }
+      }
+    }
+  }
+}
+.home-content {
+  padding: 20px 0;
+  h1 {
+    font-size: 30px;
+    line-height: 30px;
+    color: #666;
+    border-bottom: 1px solid #dedede;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 30px;
+    color: #666;
+    margin: 10px 0 30px;
+    text-align: center;
+  }
+
+}
+.home-blue {
+  background: $secondary-color;
+  text-align: center;
+  padding: 40px 0;
+  .row {
+    background: transparent;
+    padding: 0;
+    h3 {
+      color: $white;
+      font-size: 20px;
+      text-align: center;
+      line-height: 22px;
+      border-bottom: 3px solid $primary-color;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      display: inline-block;
+    }
+    p {
+      color: $white;
+      font-size: 16px;
+      text-align: center;
+      line-height: 22px;
+    }
+  }
+}
+.twitter {
+  background: $white;
+  padding: 40px 0;
+  .row {
+    background: transparent;
+    padding: 0;
+    h3 {
+      color: $primary-color;
+      font-size: 28px;
+      text-align: left;
+      line-height: 22px;
+      border-bottom: 3px solid $primary-color;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      display: inline-block;
+    }
+  }
+}
+.home-green {
+  background: $primary-color;
+  padding: 40px 0;
+  .row {
+    background: transparent;
+    padding: 0;
+    h2 {
+      font-size: 34px;
+      line-height: 30px;
+      color: #666;
+      margin: 10px 0;
+      text-align: left;
+      color: #fff;
+    }
+    p {
+      color: #fff;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: left;
+    }
+    .button-white {
+      color: $primary-color !important;
+      margin-top: 25px;
+      &:hover {
+        color: #fff !important;
+        background: $secondary-color !important;
+      }
+    }
+  }
+}
+.widget_archive, .widget_meta, .widget_recent_entries {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  h3 {
+    color: $oil;
+    font-size: 28px;
+    text-align: left;
+    line-height: 22px;
+    border-bottom: 3px solid $primary-color;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    display: inline-block;
+  }
+}
+.gform_fields {
+  margin: 20px 0 0;
+}
+.gform_footer {
+  input[type="submit"] {
+    float: right;
+  }
+}
+/*===========================================================*/
+/*========================  Footer  =========================*/
+/*===========================================================*/
+
+footer {
+  padding: 40px 0;
+  float: left;
+  width: 100%;
+  h3 {
+      color: $oil;
+      font-size: 20px;
+      text-align: left;
+      line-height: 22px;
+      border-bottom: 3px solid $gainsboro;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      display: inline-block;
+    }
+    .footer-info {
+      background: $gainsboro;
+      padding: 20px 0;
+    }
+    .name {
+      display: none;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        float: left;
+        padding-right: 10px;
+        a {
+          color: $oil;
+          font-size: 14px;
+        }
+        .fa {
+          font-size: 28px !important;
+        }
+      }
+    }
+    .legal {
+      text-align: center;
+      font-size: 12px;
+      padding: 30px 0 15px;
+    }
+}
+
+
