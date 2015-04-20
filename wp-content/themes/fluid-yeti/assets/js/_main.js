@@ -41,6 +41,11 @@ var Roots = {
       skrollr.init({
         forceHeight: false
       });
+      $('.add-dropdown').next().hide();
+      $('.add-dropdown').on('click', function(event) {
+        $(this).next().slideToggle();
+        event.preventDefault();
+      });
     }
   },
   // Home page
