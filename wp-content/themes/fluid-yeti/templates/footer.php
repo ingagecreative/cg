@@ -1,9 +1,11 @@
 <footer role="contentinfo">
-  <div class="row">
-    <div class="medium-12 columns">
-      <?php dynamic_sidebar('sidebar-footer'); ?>
-    </div>
-  </div>
+ <?php if (is_front_page()): ?>
+	<div class="row">
+		<div class="medium-12 columns">
+			<?php dynamic_sidebar('sidebar-footer'); ?>
+		</div>
+	</div>
+ <?php endif ?>
   <div class="footer-info">
 	  <div class="row">
 	  	<div class="medium-8 columns">

@@ -53,6 +53,17 @@
     transition: all 0.5s ease;
   }
 }
+.button-orange {
+  @include button-base();
+  background: #FF8800 !important;
+  padding: 10px 20px;
+  transition: background 0.5s ease;
+  &:hover {
+    background: darken( #FF8800, 10% )!important;
+    color: #fff !important;
+    transition: all 0.5s ease;
+  }
+}
 /*===========================================================*/
 /*======================  Navigation  =======================*/
 /*===========================================================*/
@@ -70,6 +81,64 @@
 .top-bar .name h1 a {
   padding-left: 0;
   padding-right: 0;
+}
+.social-header {
+  float: right;
+  width: 100%;
+  background: transparent !important;
+  list-style: none;
+  margin: -35px 0 0 !important;
+  padding: 0;
+    li {
+      float: left;
+      a {
+        color: $oil;
+        font-size: 14px;
+        line-height: 0 !important;
+      }
+      .fa {
+        font-size: 28px !important;
+      }
+    }
+}
+.main-sub-nav {
+  background: $primary-color;
+  text-align: right;
+  .row {
+    background: transparent;
+    padding: 10px 0 5px;
+    
+    form {
+      float: right;
+    }
+    #cc_form_1 {
+      margin: 0;
+      padding: 0 !important;
+      width: auto !important;
+      float: right !important;
+    }
+    .gform_fields {
+      margin: 0;
+    }
+    .gfield {
+      float: left;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .button {
+      @include button-base();
+      background: $secondary-color !important;
+      color: $white !important;
+      padding: 10px 20px;
+      margin: 0 !important;
+      transition: background 0.5s ease;
+      &:hover {
+        background: darken( $secondary-color, 20% )!important;
+        color: #fff !important;
+        transition: all 0.5s ease;
+      }
+    }
+  }
 }
 /*===========================================================*/
 /*=======================  Home Page  =======================*/
@@ -95,14 +164,14 @@ section {
 .hero {
   background-size: cover !important;
   background-repeat: no-repeat !important;
-  height: 550px;
+  height: 600px;
   .row {
     background: transparent;
     padding: 0;
   }
   .hero-vid-bg {
     background: rgba(206,206,206,0.7);
-    margin-top: 55px;
+    margin-top: 100px;
     @media screen and (max-width:640px) {
       padding-top: 30px;
     }
@@ -320,11 +389,48 @@ section {
 }
 .add-dropdown {
   border-radius: 0;
+  margin-bottom: 0;
 }
-// .pri-widget {
-//   padding-left: 0;
-//   padding-right: 0;
-// }
+.widget_archive, .widget_recent_entries {
+  ul {
+    li {
+      display: block;
+      border-bottom: 1px solid #ccc;
+      a {
+         @include button-base();
+          background: #FF8800 !important;
+          padding: 10px 20px;
+          transition: background 0.5s ease;
+          border-radius: 0 !important;
+          color: #fff;
+          width: 100%;
+          margin: 0 !important;
+          &:hover {
+            background: darken( #FF8800, 10% )!important;
+            color: #fff !important;
+            transition: all 0.5s ease;
+          }
+      }
+    }
+  }
+}
+a.pp-ssb-btn {
+   @include button-base();
+    background: #FF8800 !important;
+    padding: 10px 20px;
+    transition: background 0.5s ease;
+    border-radius: 0 !important;
+    color: #fff;
+    width: 100%;
+    margin: 0 !important;
+    box-shadow: none !important;
+    &:hover {
+      background: darken( #FF8800, 10% )!important;
+      color: #fff !important;
+      transition: all 0.5s ease;
+    }
+}
+
 /*===========================================================*/
 /*========================  Footer  =========================*/
 /*===========================================================*/
