@@ -87,10 +87,11 @@
   width: 100%;
   background: transparent !important;
   list-style: none;
-  margin: -35px 0 0 !important;
+  margin: 7px 0 0 !important;
   padding: 0;
     li {
       float: left;
+      margin-right: 5px;
       a {
         color: $oil;
         font-size: 14px;
@@ -129,8 +130,8 @@
       @include button-base();
       background: $secondary-color !important;
       color: $white !important;
-      padding: 10px 20px;
-      margin: 0 !important;
+      padding: 5px 10px;
+      margin: 5px 0 0 !important;
       transition: background 0.5s ease;
       &:hover {
         background: darken( $secondary-color, 20% )!important;
@@ -357,7 +358,7 @@ section {
 .article-snippet {
   .article-bg {
     background-size: cover !important;
-    height: 350px;
+    height: 225px;
     border: 1px solid #e5e5f5;
     position: relative;
     .overlay {
