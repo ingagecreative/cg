@@ -1,15 +1,19 @@
-<?php while (have_posts()) : the_post(); ?>
-  <article <?php post_class(); ?>>
-    <header>
-      <h1 class="entry-title"><?php the_title(); ?></h1>
-      <?php get_template_part('templates/entry-meta'); ?>
-    </header>
-    <div class="entry-content">
+<section class="hero-secondary" style="background:url(<?php the_field('hero_background') ?>)">
+  <div class="quote-box">
+    <div class="row">
+      <div class="medium-12">
+        <p><?php the_field('quote_text') ?><span> - <?php the_field('quote_name') ?></span></p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="home-content">
+  <div class="row">
+  <?php while (have_posts()) : the_post(); ?>
+    <div class="medium-12 columns">
+      <h1><?php the_title(); ?></h1>
       <?php the_content(); ?>
     </div>
-    <footer>
-      <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>')); ?>
-    </footer>
-    <?php comments_template('/templates/comments.php'); ?>
-  </article>
-<?php endwhile; ?>
+   <?php endwhile; ?>
+  </div>  
+</section>
