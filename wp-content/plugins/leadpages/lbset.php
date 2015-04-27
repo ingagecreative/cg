@@ -48,11 +48,11 @@ if (defined('PRIVATE_LEADPAGES_API_URL')) {
 }
 
 
-if ($api_key == false) {
-    show_message(false, 'Missing LeadPages API key! Please deactivate and delete this plugin, re-download the plugin and install again or follow our <a href="https://support.leadpages.net/entries/21804555-Missing-LeadPages-API-key-Please-contact-support-Error-Message" target="_blank">instructions</a>.');
+// if ($api_key == false) {
+//     show_message(false, 'Missing LeadPages API key! Please deactivate and delete this plugin, re-download the plugin and install again or follow our <a href="https://support.leadpages.net/entries/21804555-Missing-LeadPages-API-key-Please-contact-support-Error-Message" target="_blank">instructions</a>.');
 
-    return false;
-}
+//     return false;
+// }
 
 function get_api_key()
 {

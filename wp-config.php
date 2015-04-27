@@ -22,19 +22,19 @@ if ( file_exists( dirname( __FILE__ ) . '/wp-config-local.php' ) ) {
 
 } else {
 
-define('DB_NAME', 'db174749_coznew');
+define('DB_NAME', 'coznew');
 
 /** MySQL database username */
-define('DB_USER', 'db174749_admin');
+define('DB_USER', 'coznew');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'SilverH3lm');
+define('DB_PASSWORD', 'T1tt1es@b33r');
 
 /** MySQL hostname */
-define('DB_HOST', 'internal-db.s174749.gridserver.com');
+define('DB_HOST', 'coznew.db.13618907.hostedresource.com');
 
-define('WP_HOME','http://testing.ingagecreativegroup.com/cg');
-define('WP_SITEURL','http://testing.ingagecreativegroup.com/cg');
+define('WP_HOME','http://cozgreen.com');
+define('WP_SITEURL','http://cozgreen.com');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
