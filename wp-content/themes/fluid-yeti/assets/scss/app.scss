@@ -81,13 +81,14 @@
 .top-bar .name h1 a {
   padding-left: 0;
   padding-right: 0;
+  padding-top: 8px;
 }
 .social-header {
   float: left;
   width: 100%;
   background: transparent !important;
   list-style: none;
-  margin: 7px 0 0 !important;
+  margin: -45px 0 0 !important;
   padding: 0;
     li {
       float: left;
