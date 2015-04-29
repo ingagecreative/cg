@@ -201,7 +201,6 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
         height: $topbar-height;
         margin: 0;
         font-size: $rem-base;
-        width: 25%;
         @media screen and (max-width:1024px) {
           width: auto;
         }
@@ -465,7 +464,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
         .toggle-topbar { display: none; }
 
         .title-area { 
-          float: $default-float; width: 100%;}
+          float: $default-float;}
         .name h1 a { width: auto; }
 
         input,

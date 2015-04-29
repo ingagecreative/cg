@@ -7,7 +7,19 @@
         <li class="name"> <h1><a href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(home_url()); ?>/wp-content/themes/fluid-yeti/assets/img/coz.jpg"></a></h1> </li>
         <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
       </ul>
-      <div class="right">
+      <section class="top-bar-section">
+        <?php if (has_nav_menu('primary_navigation')) :
+          wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'right'));
+        endif; ?>
+      </section>
+    </nav>
+  </header>
+  <section class="main-sub-nav">
+    <div class="row medium-collapse">
+      <div class="medium-10 text-right columns">
+        <?php echo do_shortcode("[constantcontactapi formid='1']"); ?>  
+      </div>
+      <div class="medium-2 text-right columns">
         <ul class="social-header">
           <?php if(have_rows('social_media', 'option')) : ?>
             <?php while(have_rows('social_media', 'option')) : the_row(); ?>
@@ -15,18 +27,6 @@
             <?php endwhile; ?>
           <?php else: endif; ?>
         </ul>
-      </div>
-      <section class="top-bar-section">
-        <?php if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'left'));
-        endif; ?>
-      </section>
-    </nav>
-  </header>
-  <section class="main-sub-nav">
-    <div class="row medium-collapse">
-      <div class="medium-12 text-right columns">
-        <?php echo do_shortcode("[constantcontactapi formid='1']"); ?>  
       </div>
     </div>      
   </section>
