@@ -4,7 +4,7 @@
   <header>
     <nav class="top-bar" data-topbar>
       <ul class="title-area">
-        <li class="name"> <h1><a href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(home_url()); ?>/wp-content/themes/fluid-yeti/assets/img/coz.jpg"></a></h1> </li>
+        <li class="name"> <h1><a href="<?php echo esc_url(home_url()); ?>"><img src="<?php the_field('main_logo', 'options') ?>"></a></h1> </li>
         <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
       </ul>
       <section class="top-bar-section">
@@ -17,6 +17,7 @@
   <section class="main-sub-nav">
     <div class="row medium-collapse">
       <div class="medium-10 text-right columns">
+        <span class="subscribe-text">Subscribe to Coz's Email List</span>
         <?php echo do_shortcode("[constantcontactapi formid='1']"); ?>  
       </div>
       <div class="medium-2 text-right columns">
