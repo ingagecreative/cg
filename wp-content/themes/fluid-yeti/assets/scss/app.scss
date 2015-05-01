@@ -376,7 +376,7 @@ section {
       position: absolute;
       bottom: 0;
       left: 0;
-      padding: 15px 15px 0;
+      padding: 40px 15px 0;
       min-height: 225px;
       h2 {
         font-size: 20px;
@@ -441,7 +441,18 @@ a.pp-ssb-btn {
       transition: all 0.5s ease;
     }
 }
-
+.videos {
+  h3 {
+    font-size: 18px;
+    margin: 20px 0 0;
+  }
+  .video-play {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    margin-left: -30px;
+  }
+}
 /*===========================================================*/
 /*========================  Footer  =========================*/
 /*===========================================================*/
