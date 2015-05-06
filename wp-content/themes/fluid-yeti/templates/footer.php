@@ -8,11 +8,11 @@
  <?php endif ?>
   <div class="footer-info">
 	  <div class="row">
-	  	<div class="medium-8 columns">
+	  	<div class="medium-8 columns hide-for-small-only">
 	  		<?php dynamic_sidebar('sidebar-footernav'); ?>
 	  	</div>
-	  	<div class="medium-4 columns">
-	  		<ul class="right">
+	  	<div class="medium-4 columns social-footer">
+	  		<ul>
 	  			<?php if(have_rows('social_media', 'option')) : ?>
 	  				<?php while(have_rows('social_media', 'option')) : the_row(); ?>
 	  					<li><a href="<?php the_sub_field('social_link') ?>"><?php the_sub_field('social_icon') ?></a></li>

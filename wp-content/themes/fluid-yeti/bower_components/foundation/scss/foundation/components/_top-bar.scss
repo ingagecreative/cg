@@ -212,9 +212,24 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
           a {
             font-weight: $topbar-title-weight;
             color: $topbar-link-color;
-            width: 75%;
+            width: 30%;
             display: block;
             padding: 0 $topbar-link-padding;
+            @media screen and (max-width:1024px) {
+              width: 20%;
+            }
+            @media screen and (max-width:800px) {
+              width: 25%;
+            }
+            @media screen and (max-width:640px) {
+              width: 30%;
+            }
+            @media screen and (max-width:480px) {
+              width: 40%;
+            }
+            @media screen and (max-width:400px) {
+              width: 50%;
+            }
           }
         }
       }
@@ -464,8 +479,8 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
         .toggle-topbar { display: none; }
 
         .title-area { 
-          float: $default-float;}
-        .name h1 a { width: 60%; }
+          float: $default-float; width: 20%;}
+        .name h1 a { width: 100%; }
 
         input,
         .button,
@@ -525,7 +540,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
           }
           &.active:not(.has-form) {
             a:not(.button) {
-              padding: 0 $topbar-link-padding;
+              padding: 0 0.9375rem;
               line-height: $topbar-height;
               color: $topbar-link-color-active;
               background: $topbar-link-bg-active;

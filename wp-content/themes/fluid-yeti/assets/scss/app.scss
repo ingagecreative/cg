@@ -74,6 +74,9 @@
     li {
       > a {
         text-transform: uppercase;
+        @media screen and (max-width:1198px) {
+          // padding: 0 0.2375rem !important;
+        }
       }
     } 
   } 
@@ -82,45 +85,93 @@
   padding-left: 0;
   padding-right: 0;
   padding-top: 8px;
+  img {
+    // @media screen and (max-width:1024px) {
+    //   max-width: 30%;
+    // }
+    // @media screen and (max-width:640px) {
+    //   max-width: 40%;
+    // }
+    // @media screen and (max-width:480px) {
+    //   max-width: 55%;
+    // }
+  }
 }
-.social-header {
-  float: right;
-  width: 100%;
-  background: transparent !important;
-  list-style: none;
-  margin: 5px -15px 0 0 !important;
-  padding: 0;
-    li {
-      float: left;
-      margin-right: 5px;
-      a {
-        color: $white;
-        font-size: 14px;
-        line-height: 0 !important;
-      }
-      .fa {
-        font-size: 28px !important;
-      }
-      &:last-child {
-        margin-right: 0;
-      }
+.social-container {
+  text-align: right;
+  @media screen and (max-width:640px) {
+    text-align: center;
+  }
+  .social-header {
+    float: right;
+    width: 100%;
+    background: transparent !important;
+    list-style: none;
+    margin: 5px -15px 0 0 !important;
+    padding: 0;
+    @media screen and (max-width:640px) {
+      margin-right: 0 !important;
+      width: auto;
+      display: inline-block;
+      float: none;
     }
+      li {
+        float: left;
+        margin-right: 5px;
+        a {
+          color: $white;
+          font-size: 14px;
+          line-height: 0 !important;
+        }
+        .fa {
+          font-size: 28px !important;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+  }
 }
 .main-sub-nav {
   background: $primary-color;
   text-align: right;
+  @media screen and (max-width:640px) {
+    text-align: center;
+  }
   .row {
     background: transparent;
     padding: 10px 0 5px;
     
     form {
       float: right;
+      @media screen and (max-width:640px) {
+        float: left;
+        width: 100%;
+      }
     }
     #cc_form_1 {
       margin: 0;
       padding: 0 !important;
       width: auto !important;
       float: right !important;
+      @media screen and (max-width:640px) {
+        float: none !important;
+      }
+      .cc_Go {
+        @media screen and (max-width:640px) {
+          float: right !important;
+        }  
+      }
+      .input.t {
+        @media screen and (max-width:640px) {
+          max-width: 100%;
+        }
+      }
+      .cc_email_address {
+        @media screen and (max-width:640px) {
+          width: 65%;
+        }
+      }
     }
     .gform_fields {
       margin: 0;
@@ -158,9 +209,6 @@ body {
   background: #eee;
   color: #444;
 }
-.content {
-  margin-top: 120px;
-}
 header {
   box-shadow: 0 4px 2px -2px #999;
 }
@@ -176,6 +224,9 @@ section {
   background-size: cover !important;
   background-repeat: no-repeat !important;
   height: 600px;
+  @media screen and (max-width:800px) {
+    height: 400px;
+  }
   .row {
     background: transparent;
     padding: 0;
@@ -183,6 +234,9 @@ section {
   .hero-vid-bg {
     background: rgba(206,206,206,0.7);
     margin-top: 100px;
+    @media screen and (max-width:800px) {
+      margin-top: 50px;
+    }
     @media screen and (max-width:640px) {
       padding-top: 30px;
     }
@@ -191,19 +245,32 @@ section {
     }
     .hero-vid-content {
       padding-top: 75px;
-      @media screen and (max-width:640px) {
-        padding-top: 20px;
+      @media screen and (max-width:950px) {
+        padding-top: 15px;
       }
       h2 {
         color: $oil;
         font-size: 40px;
         padding: 0 0 15px 15px;
+        @media screen and (max-width:950px) {
+          font-size: 30px;
+          padding-bottom: 0;
+        }
+        @media screen and (max-width:695px) {
+          font-size: 24px;
+          padding-bottom: 0;
+        }
       }
       p {
         font-size: 20px;
         line-height: 26px;
         color: $oil;
-        padding: 0 0 15px 15px;
+        padding: 15px;
+        @media screen and (max-width:950px) {
+          font-size: 16px;
+          line-height: 22px;
+          padding: 5px 15px 15px;
+        }
       }
     }
   }
@@ -214,7 +281,7 @@ section {
 .hero-secondary {
   background-size: cover !important;
   background-repeat: no-repeat !important;
-  background-position: 0 -350px !important;
+  background-position: 0 0 !important;
   position: relative;
   height: 350px;
   .quote-box {
@@ -366,21 +433,21 @@ section {
   }
 }
 .article-snippet {
+  position: relative;
   .article-bg {
     background-size: cover !important;
     height: 225px;
     border: 1px solid #e5e5f5;
-    position: relative;
     .overlay {
       background: rgba(30,115,190,0.7);
       position: absolute;
       bottom: 0;
       left: 0;
-      padding: 40px 15px 0;
       min-height: 225px;
       h2 {
         font-size: 20px;
         border-bottom: 3px solid #81D744;
+        margin: 15px;
         a {
           color: #fff;
         }
@@ -388,6 +455,8 @@ section {
       p {
         font-size: 14px;
         color: #fff;
+        margin-left: 15px;
+        margin-right: 15px;
         a {
           @include button();
           padding: 10px;
@@ -442,15 +511,65 @@ a.pp-ssb-btn {
     }
 }
 .videos {
-  h3 {
-    font-size: 18px;
-    margin: 20px 0 0;
+  display: inline-block;
+  height: 195px;
+  overflow: hidden;
+  .video-thumb {
+    margin-top: -35px;
   }
   .video-play {
     position: absolute;
-    top: 25%;
+    top: 70px;
     left: 50%;
     margin-left: -30px;
+    @media screen and (max-width:940px) {
+      top: 45px;
+    }
+    @media screen and (max-width:780px) {
+      top: 30px;
+    }
+  }
+}
+h3.video-title {
+  font-size: 18px;
+  margin: 10px 0 0;
+}
+.downloads-intro {
+  padding-bottom: 15px;
+  border-bottom: 1px solid $gainsboro;
+}
+.download-image {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .icon {
+    background: url(../img/corner-bg.png) no-repeat 0 0;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    i {
+      color: $secondary-color;
+      float: right;
+      margin: 7px 7px 0 0;
+    }
+  }
+}
+.downloads {
+  h2 {
+    margin-bottom: 0;
   }
 }
 /*===========================================================*/
@@ -473,7 +592,7 @@ footer {
       display: inline-block;
     }
     .footer-info {
-      background: $gainsboro;
+      background: $primary-color;
       padding: 20px 0;
     }
     .name {
@@ -487,7 +606,7 @@ footer {
         float: left;
         padding-right: 10px;
         a {
-          color: $oil;
+          color: $white;
           font-size: 14px;
         }
         .fa {
@@ -499,6 +618,18 @@ footer {
       text-align: center;
       font-size: 12px;
       padding: 30px 0 15px;
+    }
+    .social-footer {
+      float: right;
+      @media screen and (max-width:640px) {
+        float: none;
+        text-align: center;
+      }
+      ul {
+        @media screen and (max-width:640px) {
+          display: inline-block;
+        }
+      }
     }
 }
 

@@ -1,6 +1,6 @@
 <?php global $img_src; ?>
 
-<div class="contain-to-grid fixed">
+<div class="contain-to-grid">
   <header>
     <nav class="top-bar" data-topbar>
       <ul class="title-area">
@@ -14,13 +14,13 @@
       </section>
     </nav>
   </header>
-  <section class="main-sub-nav">
+  <section class="main-sub-nav show-for-large-up">
     <div class="row medium-collapse">
-      <div class="medium-10 text-right columns">
+      <div class="medium-10 columns">
         <span class="subscribe-text">Subscribe to Coz's Email List</span>
         <?php echo do_shortcode("[constantcontactapi formid='1']"); ?>  
       </div>
-      <div class="medium-2 text-right columns">
+      <div class="medium-2 columns social-container">
         <ul class="social-header">
           <?php if(have_rows('social_media', 'option')) : ?>
             <?php while(have_rows('social_media', 'option')) : the_row(); ?>
