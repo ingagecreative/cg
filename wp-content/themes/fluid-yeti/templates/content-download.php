@@ -1,5 +1,10 @@
 <section class="home-content">
   <div class="row">
+    <div class="medium-12 columns">
+        <?php echo do_shortcode("[download_cart]"); ?>
+    </div>
+  </div>
+  <div class="row">
   <?php while (have_posts()) : the_post(); ?>
     <div class="medium-12 columns">
       <div class="text-center">

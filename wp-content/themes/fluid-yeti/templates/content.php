@@ -1,11 +1,11 @@
-<?php
-$src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), array(5600, 1000), false, '');
-?>
-<article class="medium-4 columns article-snippet">
-	<div class="article-bg" style="background: url(<?php echo $src[0];?> );">
-		<div class="overlay">
-			<h2 class="entry-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
-			<?php the_excerpt();?>
-		</div>
-	</div>    
-</article>
+<div class="medium-4 columns downloads">
+	<div class="download-image">
+		<span class="icon"><i class="fa fa-newspaper-o"></i></span>
+		<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); }  ?>
+	</div>
+	<h2 class="text-left"><?php the_title(); ?></h2>
+	<?php the_excerpt();?>
+	<p class="text-center">
+		<a href="<?php the_permalink(); ?>" class="button button-blue">Read More</a>
+	</p>
+</div>

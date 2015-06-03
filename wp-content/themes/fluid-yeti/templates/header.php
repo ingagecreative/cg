@@ -18,7 +18,7 @@
     <div class="row medium-collapse">
       <div class="medium-10 columns">
         <span class="subscribe-text">Subscribe to Coz's Email List</span>
-        <?php echo do_shortcode("[constantcontactapi formid='1']"); ?>  
+        <a href="https://cozgreen.leadpages.net/leadbox/144965c73f72a2%3A1116d4526346dc/5732568548769792" class="button-blue" target="_blank" style="margin-bottom: 0">Subscribe</a>
       </div>
       <div class="medium-2 columns social-container">
         <ul class="social-header">

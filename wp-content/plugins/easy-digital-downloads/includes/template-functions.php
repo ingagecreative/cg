@@ -176,6 +176,7 @@ function edd_get_purchase_link( $args = array() ) {
 
 			echo '<input type="submit" class="edd-add-to-cart edd-no-js ' . esc_attr( $class ) . '" name="edd_purchase_download" value="' . esc_attr( $args['text'] ) . '" data-action="edd_add_to_cart" data-download-id="' . esc_attr( $download->ID ) . '" ' . $data_variable . ' ' . $type . ' ' . $button_display . '/>';
 			echo '<a href="' . esc_url( edd_get_checkout_uri() ) . '" class="edd_go_to_checkout ' . esc_attr( $class ) . '" ' . $checkout_display . '>' . __( 'Checkout', 'edd' ) . '</a>';
+			echo '<br><a href="' . esc_url(home_url()) .'/shop" class="edd_go_to_checkout">Continue Shopping</a>';
 			?>
 
 			<?php if ( ! edd_is_ajax_disabled() ) : ?>

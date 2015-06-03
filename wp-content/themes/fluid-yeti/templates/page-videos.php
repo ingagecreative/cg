@@ -23,7 +23,7 @@
 						<img src="<?php echo esc_url(home_url()); ?>/wp-content/themes/fluid-yeti/assets/img/play-standard.png" class="video-play">
 						<img src="http://img.youtube.com/vi/<?php the_sub_field('video_id') ?>/0.jpg" alt="" class="video-thumb">
 					</a>
-					<h3 class="video-title"><?php the_sub_field('video_title') ?></h3>
+					<h2 class="video-title"><?php the_sub_field('video_title') ?></h2>
 					<p><?php the_sub_field('video_description') ?></p>
 
 					<div id="vidModal-<?php echo $count ?>" class="reveal-modal medium" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">

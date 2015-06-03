@@ -1,14 +1,14 @@
 <?php get_template_part('templates/page', 'header');?>
-<section class="hero-secondary" style="background:url(<?php echo esc_url(home_url());?>/wp-content/themes/fluid-yeti/assets/img/hero2.jpg)">
+<section class="hero-secondary" style="background:url(<?php the_field('hero_bg_blog', get_option('page_for_posts')) ?>)">
 	<div class="quote-box">
 		<div class="row">
 			<div class="medium-12">
-				<p>...this is a spot where you can put your own personalized quotes. The idea would be to pick a hero image that matches the quote text. I took this photo from your Facebook page, it could be about conquering your fears to experience something amazing and life changing...<span> - Coz Green</span></p>
+				<p><?php the_field('quote_text', get_option('page_for_posts')) ?><span> - <?php the_field('quote_name', get_option('page_for_posts')) ?></span></p>
 			</div>
 		</div>
 	</div>
 </section>
-<section class="blog">
+<section class="home-content">
 	<div class="row">
 		<div class="medium-12 columns">
 			<?php if (roots_display_sidebar()):?>
@@ -34,3 +34,16 @@
 		<?php endif;?>
 	</div>
 </section>
+<?php if (get_field('show_green_section', get_option('page_for_posts'))): ?>
+<section class="home-green">
+	<div class="row">
+		<div class="medium-8 columns">
+			<h2><?php the_field('green_section_header', get_option('page_for_posts')) ?></h2>
+			<p><?php the_field('green_section_text', get_option('page_for_posts')) ?></p>
+		</div>
+		<div class="medium-4 columns text-center">
+			<a href="<?php the_field('green_link', get_option('page_for_posts')) ?>" class="button-white"><?php the_field('green_button_text', get_option('page_for_posts')) ?></a>
+		</div>
+	</div>
+</section>
+<?php endif ?>
