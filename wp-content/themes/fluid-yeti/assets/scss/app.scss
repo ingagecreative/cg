@@ -75,6 +75,19 @@
     transition: all 0.5s ease;
   }
 }
+.button-article {
+  @include button-base();
+  background: $secondary-color !important;
+  padding: 10px 0;
+  transition: background 0.5s ease;
+  display: block;
+  color: $white;
+  &:hover {
+    background: darken( $secondary-color, 10% )!important;
+    color: $primary-color !important;
+    transition: all 0.5s ease;
+  }
+}
 .edd_go_to_checkout, .edd_checkout a {
   @include button-base();
   background: $secondary-color !important;
@@ -385,19 +398,33 @@ section {
 .twitter {
   background: $white;
   padding: 40px 0;
+  color: #474747;
+  font-size: 16px;
+  line-height: 26px;
   .row {
     background: transparent;
     padding: 0;
     h3 {
-      color: $primary-color;
-      font-size: 28px;
+      color: #666;
+      font-size: 18px;
       text-align: left;
       line-height: 22px;
-      border-bottom: 3px solid $primary-color;
+      border-bottom: 1px solid #999;
       padding-bottom: 15px;
-      margin-bottom: 15px;
+      margin-bottom: 30px;
       margin-top: 15px;
       display: inline-block;
+      text-transform: uppercase;
+    }
+    h4 {
+      color: #474747;
+      font-size: 30px;
+      text-align: left;
+      font-weight: bold;
+      line-height: 36px;
+      padding-bottom: 5px;
+      margin-top: 0;
+      text-transform: none;
     }
   }
 }
@@ -739,4 +766,21 @@ footer {
     font-style: italic;
   }
 }
-
+.byline {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  margin: 5px 0;
+  padding: 5px 0;
+  color: $iron;
+  font-size: 14px;
+  font-weight: 300;
+}
+.podcast-bucket-head {
+  background: url(http://cozgreen.com/wp-content/uploads/2015/04/podcast-head-TEMP.jpg) no-repeat top center;
+  background-size: contain !important;
+  width: 100%;
+  height: 240px;
+}
+.article-nav {
+  margin-top: 40px !important;
+}

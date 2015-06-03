@@ -132,3 +132,4 @@ function fluid_taxonomies() {
 }	
 // Init all taxonomies
 add_action( 'init', 'fluid_taxonomies' );
+*/

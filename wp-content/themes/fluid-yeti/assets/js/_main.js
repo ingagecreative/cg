@@ -37,10 +37,7 @@ var Roots = {
           }
         }
       });
-      // Initialize Skrollr
-      skrollr.init({
-        forceHeight: false
-      });
+      
       $('.add-dropdown').next().hide();
       $('.add-dropdown').on('click', function(event) {
         $(this).next().slideToggle();

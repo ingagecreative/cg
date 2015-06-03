@@ -249,8 +249,8 @@ $warning-color: #f08a24 !default;   // carrot
 $info-color: #a0d3e8 !default;      // cornflower
 
 // We use these to define default font stacks
-$font-family-sans-serif: Helvetica, Arial, sans-serif;
-$font-family-serif: Helvetica, Arial, sans-serif;
+$font-family-sans-serif: 'Open Sans', sans-serif;
+$font-family-serif: 'Open Sans', sans-serif;
 $font-family-monospace: Helvetica, Arial, sans-serif;
 
 // We use these to define default font weights
@@ -259,7 +259,7 @@ $font-weight-bold: bold !default;
 
 // We use these to control various global styles
 $body-bg: #fff !default;
-$body-font-color: #222 !default;
+$body-font-color: #474747 !default;
 $body-font-family: $font-family-sans-serif !default;
 $body-font-weight: $font-weight-normal !default;
 $body-font-style: normal !default;

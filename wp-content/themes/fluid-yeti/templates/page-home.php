@@ -61,10 +61,39 @@
 <section class="twitter">
 	<div class="row">
 		<div class="medium-6 columns">
-			<?php dynamic_sidebar('sidebar-home'); ?>
+			<h3 class="name">Latest Podcast</h3>
+			<?php $cat_id = 11; //the certain category ID
+			$latest_cat_post = new WP_Query( array('posts_per_page' => 1, 'category__in' => array($cat_id)));
+			if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();  ?>
+				<div class="podcast-bucket-head"></div>
+				<h4><?php the_title(); ?></h4>
+				<p class="byline author"><?php echo __('By', 'roots'); ?> 
+					<?php echo get_the_author(); ?> | 
+					<?php echo get_the_date(); ?>
+				</p>
+				<?php the_field('custom_intro'); ?>
+			<?php endwhile; endif; ?>
 		</div>
 		<div class="medium-6 columns">
-			<?php dynamic_sidebar('sidebar-archive'); ?>
+			<h3 class="name">Latest Blog</h3>
+			<?php $cat_id = 18; //the certain category ID
+			$latest_cat_post = new WP_Query( array('posts_per_page' => 1, 'category__in' => array($cat_id)));
+			if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();  ?>
+				<h4><?php the_title(); ?></h4>
+				<p class="byline author"><?php echo __('By', 'roots'); ?> 
+					<?php echo get_the_author(); ?> | 
+					<?php echo get_the_date(); ?>
+				</p>
+				<?php the_field('custom_intro'); ?>
+				<div class="row article-nav">
+					<div class="medium-6 columns">
+						<a href="<?php the_permalink(); ?>" class="button-article">View This Article</a>
+					</div>
+					<div class="medium-6 columns">
+						<a href="/blog" class="button-article">View All Articles</a>
+					</div>
+				</div>
+			<?php endwhile; endif; ?>
 		</div>
 	</div>
 </section>

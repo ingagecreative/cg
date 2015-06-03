@@ -8,7 +8,7 @@ function roots_excerpt_more($more) {
 add_filter('excerpt_more', 'roots_excerpt_more');
 
 function custom_excerpt_length($length) {
-	return 20;
+	return 60;
 }
 add_filter('excerpt_length', 'custom_excerpt_length', 999);
 
