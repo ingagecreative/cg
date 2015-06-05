@@ -38,11 +38,11 @@ var Roots = {
         }
       });
       
-      $('.add-dropdown').next().hide();
-      $('.add-dropdown').on('click', function(event) {
-        $(this).next().slideToggle();
-        event.preventDefault();
-      });
+      // $('.add-dropdown').next().hide();
+      // $('.add-dropdown').on('click', function(event) {
+      //   $(this).next().slideToggle();
+      //   event.preventDefault();
+      // });
     }
   },
   // Home page

@@ -10,16 +10,14 @@
 </section>
 <section class="home-content">
 	<div class="row">
-		<div class="medium-12 columns">
+		<div class="medium-3 columns">
 			<?php if (roots_display_sidebar()):?>
 				<aside class="sidebar" role="complementary">
 					<?php include roots_sidebar_path();?>
 				</aside><!-- /.sidebar -->
 			<?php endif;?>
 		</div>
-	</div>
-	<div class="row">
-		<div class="medium-12 columns">
+		<div class="medium-9 columns">
 			<?php if (!have_posts()):?>
 				<p><?php _e('Sorry, no results were found.', 'roots');?></p>
 				<?php get_search_form();?>

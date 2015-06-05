@@ -39,10 +39,10 @@ function roots_widgets_init() {
 	register_sidebar(array(
 			'name'          => __('Primary', 'roots'),
 			'id'            => 'sidebar-primary',
-			'before_widget' => '<section class="widget pri-widget medium-4 columns %1$s %2$s">',
+			'before_widget' => '<section class="widget pri-widget medium-12 columns %1$s %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<button class="button expand add-dropdown">',
-			'after_title'   => '</button>',
+			'before_title'  => '<h3 class="name">',
+			'after_title'   => '</h3>',
 		));
 
 	register_sidebar(array(

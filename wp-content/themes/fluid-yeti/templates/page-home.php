@@ -90,7 +90,7 @@
 						<a href="<?php the_permalink(); ?>" class="button-article">View This Article</a>
 					</div>
 					<div class="medium-6 columns">
-						<a href="/blog" class="button-article">View All Articles</a>
+						<a href="blog" class="button-article">View All Articles</a>
 					</div>
 				</div>
 			<?php endwhile; endif; ?>

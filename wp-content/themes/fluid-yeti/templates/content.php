@@ -5,7 +5,7 @@
 	</div>
 	<h2 class="text-left"><?php the_title(); ?></h2>
 	<?php the_excerpt();?>
-	<p class="text-center">
+	<p class="text-center button-p">
 		<a href="<?php the_permalink(); ?>" class="button button-blue">Read More</a>
 	</p>
 </div>
