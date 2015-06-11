@@ -405,10 +405,11 @@ section {
     background: transparent;
     padding: 0;
     h3 {
-      color: #666;
-      font-size: 18px;
+      color: $primary-color;
+      font-size: 24px;
+      font-weight: bold;
       text-align: left;
-      line-height: 22px;
+      line-height: 26px;
       border-bottom: 1px solid #999;
       padding-bottom: 15px;
       margin-bottom: 30px;
@@ -418,10 +419,10 @@ section {
     }
     h4 {
       color: #474747;
-      font-size: 30px;
+      font-size: 20px;
       text-align: left;
       font-weight: bold;
-      line-height: 36px;
+      line-height: 26px;
       padding-bottom: 5px;
       margin-top: 0;
       text-transform: none;
@@ -470,8 +471,8 @@ section {
     text-align: left;
     line-height: 26px;
     border-bottom: 1px solid $primary-color;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
+    padding-bottom: 15px !important;
+    margin-bottom: 15px !important;
     margin-top: 15px;
     display: inline-block;
   }
@@ -518,21 +519,12 @@ section {
   ul {
     li {
       display: block;
-      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
       a {
-         @include button-base();
-          background: $secondary-color !important;
-          padding: 10px 20px;
-          transition: background 0.5s ease;
-          border-radius: 0 !important;
-          color: #fff;
+          padding: 0;
+          color: $primary-color;
           width: 100%;
           margin: 0 !important;
-          &:hover {
-            background: darken( $secondary-color, 10% )!important;
-            color: #fff !important;
-            transition: all 0.5s ease;
-          }
       }
     }
   }
@@ -679,15 +671,17 @@ h2.video-title {
         line-height: 24px;
         color: #474747;
         margin: 15px 0;
+        padding: 0 15px;
         text-align: center;
       }
       p {
         font-size: 14px;
         line-height: 22px;
+        padding: 0 15px;
       }
       .button-p {
         position: absolute;
-        bottom: 0;
+        bottom: -15px;
         width: 100%;
       }
     }
@@ -811,4 +805,7 @@ footer {
 }
 .article-nav {
   margin-top: 40px !important;
+  position: absolute;
+  width: 100% !important;
+  bottom: 0;
 }
